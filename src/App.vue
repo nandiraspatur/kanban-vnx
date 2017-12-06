@@ -26,4 +26,8 @@ export default {
 body {
   background: #ecf0f1;
 }
+
+.actions.task {
+  text-align: center !important;
+}
 </style>

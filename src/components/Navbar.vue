@@ -12,10 +12,10 @@
         Add New Task
       </div>
     </a>
-    <div class="ui tiny modal">
+    <div class="ui tiny modal create">
       <i class="close icon"></i>
       <div class="header">
-        Profile Picture
+        Create New Task
       </div>
       <div class="content">
         <div class="ui form fluid">
@@ -67,9 +67,13 @@ export default {
   methods: {
     createTask () {
       kanbanref.push(this.formNewTask)
+      this.formNewTask.title = ''      
+      this.formNewTask.desc = ''      
+      this.formNewTask.point = 0      
+      this.formNewTask.asigned_to = ''      
     },
     showModalTask () {
-      $('.tiny.modal')
+      $('.tiny.modal.create')
         .modal('show')
       ;
     }

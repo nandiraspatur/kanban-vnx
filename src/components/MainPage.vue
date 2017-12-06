@@ -34,19 +34,6 @@ export default {
     Doing,
     Done,
     Navbar
-  },
-  data () {
-    return {
-      name: ''
-    }
-  },
-  firebase: {
-    names: kanbanref
-  },
-  methods: {
-    submitFirebase () {
-      kanbanref.push({name: this.name, status: true})
-    }
   }
 }
 </script>
