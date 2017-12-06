@@ -51,7 +51,7 @@
 <script>
 import { kanbanref } from '../firebase'
 export default {
-    data () {
+  data () {
     return {
       modalClass: `ui tiny modal ${this.task['.key']}`
     }
@@ -59,21 +59,21 @@ export default {
   props: ['task'],
   methods: {
     showModalDetail () {
+      // eslint-disable-next-line
       $(`.tiny.modal.${this.task['.key']}`)
         .modal('show')
-      ;
     },
     deleteTask (key) {
       kanbanref.child(key).remove()
+      // eslint-disable-next-line
       $(`.tiny.modal.${key}`)
         .modal('hide')
-      ;
     },
     backStep (key) {
       kanbanref.child(key).update({ status: 'doing' })
+      // eslint-disable-next-line
       $(`.tiny.modal.${key}`)
         .modal('hide')
-      ;
     }
   }
 }

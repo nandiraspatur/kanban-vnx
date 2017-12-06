@@ -63,27 +63,27 @@ export default {
   props: ['task'],
   methods: {
     showModalDetail (key) {
+      // eslint-disable-next-line
       $(`.tiny.modal.${key}`)
         .modal('show')
-      ;
     },
     deleteTask (key) {
       kanbanref.child(key).remove()
+      // eslint-disable-next-line
       $(`.tiny.modal.${key}`)
         .modal('hide')
-      ;
     },
     nextStep (key) {
       kanbanref.child(key).update({ status: 'doing' })
+      // eslint-disable-next-line
       $(`.tiny.modal.${key}`)
         .modal('hide')
-      ;
     },
     backStep (key) {
       kanbanref.child(key).update({ status: 'backlog' })
+      // eslint-disable-next-line
       $(`.tiny.modal.${key}`)
         .modal('hide')
-      ;
     }
   }
 }

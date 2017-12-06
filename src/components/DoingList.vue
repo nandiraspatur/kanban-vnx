@@ -64,27 +64,27 @@ export default {
   props: ['task'],
   methods: {
     showModalDetail () {
+      // eslint-disable-next-line
       $(`.tiny.modal.${this.task['.key']}`)
         .modal('show')
-      ;
     },
     deleteTask (key) {
       kanbanref.child(key).remove()
+      // eslint-disable-next-line
       $(`.tiny.modal.${key}`)
         .modal('hide')
-      ;
     },
     nextStep (key) {
       kanbanref.child(key).update({ status: 'done' })
+      // eslint-disable-next-line
       $(`.tiny.modal.${key}`)
         .modal('hide')
-      ;
     },
     backStep (key) {
       kanbanref.child(key).update({ status: 'todo' })
+      // eslint-disable-next-line
       $(`.tiny.modal.${key}`)
         .modal('hide')
-      ;
     }
   }
 }

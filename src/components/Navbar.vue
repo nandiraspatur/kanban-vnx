@@ -67,15 +67,15 @@ export default {
   methods: {
     createTask () {
       kanbanref.push(this.formNewTask)
-      this.formNewTask.title = ''      
-      this.formNewTask.desc = ''      
-      this.formNewTask.point = 0      
-      this.formNewTask.asigned_to = ''      
+      this.formNewTask.title = ''
+      this.formNewTask.desc = ''
+      this.formNewTask.point = 0
+      this.formNewTask.asigned_to = ''
     },
     showModalTask () {
+      // eslint-disable-next-line
       $('.tiny.modal.create')
         .modal('show')
-      ;
     }
   }
 }

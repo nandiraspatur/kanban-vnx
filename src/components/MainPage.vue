@@ -26,7 +26,6 @@ import Todo from '@/components/Todo'
 import Doing from '@/components/Doing'
 import Done from '@/components/Done'
 import Navbar from '@/components/Navbar'
-import { kanbanref } from '../firebase'
 export default {
   components: {
     Backlog,
